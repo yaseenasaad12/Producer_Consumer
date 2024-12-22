@@ -1,5 +1,5 @@
 .simulation-area {
-  width: calc(100% - 300px); /* Adjust width to leave space for the menu bar */
+  width: calc(100% - 255px ); /* Adjust width to leave space for the menu bar */
   min-width: 600px; /* Set a minimum width */
   height: calc(100vh - 15px); /* Adjust height to leave space for the header */
   min-height: 500px; /* Set a minimum height */
@@ -15,6 +15,6 @@
   padding: 10px; /* Padding inside the simulation area */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: background-color 0.3s ease; /* Smooth background color transition */
-  margin-top: 15px; /* Add margin to leave space for the header */
-  margin-left: 280px; /* Add margin to leave space for the menu bar */
+  margin-top: 111px; /* Add margin to leave space for the header */
+  margin-left: 232px; /* Add margin to leave space for the menu bar */
 }

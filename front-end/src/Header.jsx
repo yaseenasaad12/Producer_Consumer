@@ -8,7 +8,8 @@ const Header = ({ products, increment, decrement }) => {
     <header>
      <div className="header-controls">
      <div className="header-left">
-     <img src={logo} alt="Logo" className="logo" /> 
+     <img src={logo} alt="Logo" className="logo" />
+     <h2>Producer-Consumer Simulation</h2> 
      </div>
      <div className="header-center">
       <p>Number of Products: {products}</p>

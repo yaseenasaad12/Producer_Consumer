@@ -1,6 +1,6 @@
 .control-panel {
-  width: 250px; /* Reduced width */
-  background: linear-gradient(to bottom, #ffffff, #f0f4f8); /* Smooth gradient */
+  width: 200px; /* Reduced width */
+  background: linear-gradient(to bottom, #e0dddd, #f0f4f8); /* Smooth gradient */
   border-right: 1px solid #ccc;
   padding: 15px; /* Reduced padding */
   position: fixed;
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px; /* Increased gap for better spacing */
-  padding-top: 80px;
+  padding-top: 130px;
 }
 
 .control-item {

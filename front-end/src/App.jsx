@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from './header'
 import ControlPanel from './ControlPanel';
 import SimulationArea from './SimulationArea';
-import Footer from './footer'
 
 
 const App = () => {
@@ -34,7 +33,6 @@ const App = () => {
         clearShapes={clearShapes}
       />
       <SimulationArea shapes={shapes} setShapes={setShapes} />
-      <Footer/>
     </div>
   );
 };

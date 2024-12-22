@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import Header from './header'
+import ControlPanel from './ControlPanel';
+import SimulationArea from './SimulationArea';
+import Footer from './footer'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+const App = () => {
+  const [products, setProducts] = useState(0);
+  const [shapes, setShapes] = useState([]);
+
+  const incrementProducts = () => setProducts(products + 1);
+  const decrementProducts = () => {
+    if (products > 0) setProducts(products - 1);
+  };
+  const clearShapes = () => setShapes([]);
+  const simulate = () => {
+    // Logic to start simulation
+  };
+  const resimulate = () => {
+    // Logic to reset and start simulation
+  };
+  const endSimulation = () => {
+    // Logic to end simulation
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      <Header products={products} increment={incrementProducts} decrement={decrementProducts} />
+      <ControlPanel
+        simulate={simulate}
+        resimulate={resimulate}
+        endSimulation={endSimulation}
+        clearShapes={clearShapes}
+      />
+      <SimulationArea shapes={shapes} setShapes={setShapes} />
+      <Footer/>
+    </div>
+  );
+};
 
-export default App
+export default App;

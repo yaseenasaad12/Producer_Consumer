@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #f0f0f0; /* Set background to grey */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,15 +25,26 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fdfdfd; /* Ensure body background is grey */
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
+  color: #180c0c; /* Change this to your desired color */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px; /* Adjust this value as needed */
 }
+p {
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+}
+
 
 button {
   border-radius: 8px;
@@ -57,7 +68,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #f0f0f0; /* Light mode background color */
   }
   a:hover {
     color: #747bff;

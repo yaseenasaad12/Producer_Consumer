@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between; /* Space between items */
   align-items: center;
-  padding: 20px 40px; /* Increase padding for more space */
+  padding: 8px 20px; /* Increase padding for more space */
   background: linear-gradient(to right, #e0dddd, #f0f4f8); /* Subtle gradient background */
   box-shadow: 0 4px 10px rgba(217, 29, 29, 0.1); /* Soft shadow for depth */
   position: fixed;
@@ -18,7 +18,7 @@
 .header-controls p {
   margin: 0 0 10px 0; /* Add margin below the paragraph */
   font-size: 1.3em;
-  color: #555;
+  color: #000000;
 }
 
 .button-group {
@@ -55,7 +55,7 @@
 
 .logo {
   border-radius: 20px;
-  height: 100px; /* Keep the original size */
+  height: 110px; /* Keep the original size */
   margin-right: 10px; /* Original margin */
   transition: transform 0.3s ease;
 }

@@ -3,7 +3,7 @@ import { FaCog, FaPlay, FaRedo, FaTrashAlt, FaLink } from 'react-icons/fa';
 import { MdQueue, MdSettingsInputComponent } from 'react-icons/md';
 import './ControlPanel.css';
 
-const ControlPanel = ({ onSimulate, onResimulate, onClear }) => {
+const ControlPanel = ({ onSimulate, onResimulate, onClear, onaddQueue, onaddMachine }) => {
   const [activeMenu, setActiveMenu] = useState('Simulate');
 
   const handleMenuClick = (menu) => {
@@ -11,16 +11,24 @@ const ControlPanel = ({ onSimulate, onResimulate, onClear }) => {
     if (menu === 'Simulate') onSimulate();
     if (menu === 'Resimulate') onResimulate();
     if (menu === 'Clear') onClear();
+    if (menu === 'Queue') onaddQueue();
+    if (menu === 'Machine') onaddMachine();
   };
 
   return (
     <div className="control-panel">
       <div className="control-items">
-        <div className="control-item">
+        <div
+          className={`control-item ${activeMenu === 'Queue' ? 'active' : ''}`}
+          onClick={() => handleMenuClick('Queue')}
+        >
           <MdQueue className="control-icon" />
           <span>Queue</span>
         </div>
-        <div className="control-item">
+        <div
+          className={`control-item ${activeMenu === 'Machine' ? 'active' : ''}`}
+          onClick={() => handleMenuClick('Machine')}
+        >
           <MdSettingsInputComponent className="control-icon" />
           <span>Machine</span>
         </div>

@@ -20,3 +20,10 @@
   border-radius: 10px;
   
 }
+
+.react-flow-container {
+  margin-left: 12vw;
+  margin-top: 14vh;
+  width: 86vw;
+  height: 86vh;
+}
